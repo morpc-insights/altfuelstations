@@ -1,0 +1,27 @@
+fields:
+  - name: GEOIDFQ
+    type: string
+    description: 'Unique identifier for the geography as issued by MORPC.  These are identical to fully-qualified Census-issued GEOIDs for Census geographies.'
+  - name: NAME
+    type: string
+    description: 'Name of the geography.'    
+  - name: GEOTYPE
+    type: string
+    description: 'Human readable string with describes the summary level (geography type) for which the GEOID applies.  The combination of GEOTYPE and GEOID uniquely identify the geography for the record.'
+  - name: Open year
+    type: integer
+    description: 'Four-digit year in which the alternative fuel station(s) opened'
+  - name: Fuel type
+    type: string
+    description: 'Type of alternative fuel sold by the station(s)'
+  - name: count
+    type: integer
+    description: 'Count of alternative fuel stations that opened in the indicated year which sold the indicated fuel.'
+missingValues:
+  - ''
+primaryKey:
+  - GEOIDFQ
+  - Open year
+  - Fuel type
+  
+  

@@ -1,0 +1,14 @@
+name: altfuelstations
+type: table
+title: MORPC Insights | Alternative Fuel Stations by Year
+description: Count of Central Ohio refueling stations selling alternative fuels which
+  opened in each year according to data maintained by the U.S. Dept of Energy Alternative
+  Fuels Data Center.
+profile: data-resource
+path: altfuelstations_long.csv
+scheme: file
+format: csv
+mediatype: text/csv
+hash: a82fcdf73df1433e1908296589134696
+bytes: 1329632
+schema: altfuelstations_long.schema.yaml
