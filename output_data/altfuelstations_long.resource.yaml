@@ -9,6 +9,6 @@ path: altfuelstations_long.csv
 scheme: file
 format: csv
 mediatype: text/csv
-hash: a82fcdf73df1433e1908296589134696
+hash: 30b1650b772f3a612e1d5ea4060d8f59
 bytes: 1329632
 schema: altfuelstations_long.schema.yaml

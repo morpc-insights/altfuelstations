@@ -7967,16 +7967,12 @@ Resource file: output_data\altfuelstations_long.resource.yaml
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>morpc.load_frictionless_data | INFO | Loading Frictionless Resource file at location ..\morpc-geos-collect\output_data\morpc-geos-lookup.resource.yaml
-..\morpc-geos-collect\output_data\morpc-geos-lookup.resource.yaml
-..\morpc-geos-collect\output_data\morpc-geos-lookup.schema.yaml
 morpc.load_frictionless_data | INFO | Copying data, resource file, and schema to directory input_data
 morpc.load_frictionless_data | INFO | --&gt; Data file: input_data\morpc-geos-lookup.csv
 morpc.load_frictionless_data | INFO | --&gt; Resource file: input_data\morpc-geos-lookup.resource.yaml
 morpc.load_frictionless_data | INFO | --&gt; Schema file: input_data\morpc-geos-lookup.schema.yaml
 morpc.load_frictionless_data | INFO | Validating resource including data and schema.
 morpc.frictionless_validate_resource | INFO | Validating resource on disk (including data and schema). This may take some time.
-morpc-geos-lookup.resource.yaml
-morpc-geos-lookup.schema.yaml
 morpc.frictionless_validate_resource | INFO | Resource is valid
 morpc.load_frictionless_data | INFO | Loading data.
 frictionless_cast_field_types | INFO | Casting field GEOIDFQ as type string.
@@ -8193,26 +8189,20 @@ frictionless_cast_field_types | INFO | Casting field PLACECOMBO as type string.
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>morpc.load_frictionless_data | INFO | Loading Frictionless Resource file at location ..\morpc-altfuelstations-summarize\output_data\morpc-altfuelstations-all-long.resource.yaml
-..\morpc-altfuelstations-summarize\output_data\morpc-altfuelstations-all-long.resource.yaml
-..\morpc-altfuelstations-summarize\output_data\morpc-altfuelstations-all-long.schema.yaml
 morpc.load_frictionless_data | INFO | Copying data, resource file, and schema to directory input_data
 morpc.load_frictionless_data | INFO | --&gt; Data file: input_data\morpc-altfuelstations-all-long.csv
 morpc.load_frictionless_data | INFO | --&gt; Resource file: input_data\morpc-altfuelstations-all-long.resource.yaml
 morpc.load_frictionless_data | INFO | --&gt; Schema file: input_data\morpc-altfuelstations-all-long.schema.yaml
 morpc.load_frictionless_data | INFO | Validating resource including data and schema.
 morpc.frictionless_validate_resource | INFO | Validating resource on disk (including data and schema). This may take some time.
-morpc-altfuelstations-all-long.resource.yaml
-morpc-altfuelstations-all-long.schema.yaml
 morpc.frictionless_validate_resource | INFO | Resource is valid
 morpc.load_frictionless_data | INFO | Loading data.
 frictionless_cast_field_types | INFO | Casting field NAME as type string.
 frictionless_cast_field_types | INFO | Casting field GEOIDFQ as type string.
 frictionless_cast_field_types | INFO | Casting field SUMLEVEL as type string.
 frictionless_cast_field_types | INFO | Casting field open_year as type integer.
-frictionless_cast_field_types | WARNING | Failed conversion of fieldname open_year to type 'int'.  Trying type 'Int64' instead.
 frictionless_cast_field_types | INFO | Casting field fuel_type_code as type string.
 frictionless_cast_field_types | INFO | Casting field count as type integer.
-frictionless_cast_field_types | WARNING | Failed conversion of fieldname count to type 'int'.  Trying type 'Int64' instead.
 </pre>
 </div>
 </div>
@@ -9061,11 +9051,8 @@ Casting field GEOID as type string.
 <pre>morpc.frictionless_create_resource | INFO | Format not specified. Using format derived from data file extension: csv
 morpc.frictionless_create_resource | INFO | Schema path not specified. Using path derived from data file path: altfuelstations_long.schema.yaml
 morpc.frictionless_create_resource | INFO | Writing Frictionless Resource file to output_data\altfuelstations_long.resource.yaml
-altfuelstations_long.schema.yaml
 morpc.frictionless_create_resource | INFO | Validating resource on disk.
 morpc.frictionless_validate_resource | INFO | Validating resource on disk (including data and schema). This may take some time.
-altfuelstations_long.resource.yaml
-altfuelstations_long.schema.yaml
 morpc.frictionless_validate_resource | INFO | Resource is valid
 </pre>
 </div>
@@ -9083,12 +9070,12 @@ morpc.frictionless_validate_resource | INFO | Resource is valid
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=035cfd7b-d7ee-4131-9329-e6d3d46c7b74">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=035cfd7b-d7ee-4131-9329-e6d3d46c7b74">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> agg
@@ -9123,8 +9110,6 @@ morpc.frictionless_validate_resource | INFO | Resource is valid
 
     <span class="c1"># Drop the geography name and type</span>
     <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">"Open year"</span><span class="p">,</span><span class="s2">"Fuel type"</span><span class="p">,</span><span class="s2">"count"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">)</span>
-    <span class="n">labels</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="s2">"Fuel type"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">textwrap</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
     
     <span class="c1"># Pivot to wide format</span>
     <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"Open year"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">"Fuel type"</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -9142,6 +9127,8 @@ morpc.frictionless_validate_resource | INFO | Resource is valid
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="nb">round</span><span class="p">(</span><span class="n">tick</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">tick</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()])</span>
+    <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">textwrap</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
     <span class="n">legend</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">'center left'</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">labelspacing</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"lightgrey"</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -9204,138 +9191,6 @@ morpc.frictionless_validate_resource | INFO | Resource is valid
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\algorithms.py:798: FutureWarning: In a future version, the Index constructor will not infer numeric dtypes when passed object-dtype sequences (matching Series behavior)
-  uniques = Index(uniques)
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=07b0555f-a99e-4297-8623-0aa3de7122df">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9374,7 +9229,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">columnNames</span><span class="o">=</span><span class="p">[</span><span class="s2">"TileID"</span><span class="p">,</span><span class="s2">"TilesetID"</span><span class="p">,</span><span class="s2">"GeographyType"</span><span class="p">,</span><span class="s2">"GeographyName"</span><span class="p">,</span><span class="s2">"Category"</span><span class="p">,</span><span class="s2">"Headline"</span><span class="p">,</span><span class="s2">"Commentary"</span><span class="p">,</span><span class="s2">"ThumbnailURL"</span><span class="p">,</span><span class="s2">"Contributor"</span><span class="p">,</span><span class="s2">"Vintage"</span><span class="p">,</span><span class="s2">"UpdateInterval"</span><span class="p">,</span><span class="s2">"ShareURL"</span><span class="p">,</span><span class="s2">"DataProductURL"</span><span class="p">,</span><span class="s2">"MoreInformationURL"</span><span class="p">]</span>
@@ -9399,7 +9254,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span> <span class="o">=</span> <span class="n">stations</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">stations</span><span class="p">[</span><span class="s2">"GEOIDFQ"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">platformIncludeList</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -9424,7 +9279,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">"GEOIDFQ"</span><span class="p">,</span><span class="s2">"NAME"</span><span class="p">,</span><span class="s2">"GEOTYPE"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">)</span> \
@@ -9452,7 +9307,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"GeographyType"</span><span class="p">]</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="s2">"GeographyType"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span>
@@ -9482,7 +9337,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"TileID"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -9511,7 +9366,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"ThumbnailURL"</span><span class="p">]</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="s2">"GEOIDFQ"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">geoid</span><span class="p">:</span><span class="s2">"https://raw.githubusercontent.com/morpc-insights/altfuelstations/refs/heads/main/output_data/charts/</span><span class="si">{}</span><span class="s2">.svg"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">geoid</span><span class="p">))</span>
@@ -9536,7 +9391,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"Contributor"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Mid-Ohio Regional Planning Commission"</span>
@@ -9564,7 +9419,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"DataProductURL"</span><span class="p">]</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="s2">"GEOIDFQ"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">geoid</span><span class="p">:</span><span class="s2">"https://www.arcgis.com/apps/dashboards/87fd6a0b569b430c9e4c6e7fa4fbd4c5#geoid=</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">geoid</span><span class="p">))</span>
@@ -9589,10 +9444,10 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"MoreInformationURL"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"https://raw.githubusercontent.com/morpc-insights/altfuelstations/refs/heads/main/fact_sheets/altfuelstations.pdf"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="p">[</span><span class="s2">"MoreInformationURL"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"https://morpc1-my.sharepoint.com/:w:/g/personal/aporr_morpc_org/EVLU02aZ3JlPp4KkTWiDqTYBHuow3DjvxECK2rHyq0Am8w?e=giTobc"</span>
 </pre></div>
 </div>
 </div>
@@ -9614,7 +9469,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="n">columnNames</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"columns"</span><span class="p">)</span>
@@ -9639,7 +9494,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -9653,7 +9508,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9705,7 +9560,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <td>annually</td>
 <td>None</td>
 <td>https://www.arcgis.com/apps/dashboards/87fd6a0...</td>
-<td>https://raw.githubusercontent.com/morpc-insigh...</td>
+<td>https://morpc1-my.sharepoint.com/:w:/g/persona...</td>
 </tr>
 <tr>
 <th>1</th>
@@ -9722,7 +9577,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <td>annually</td>
 <td>None</td>
 <td>https://www.arcgis.com/apps/dashboards/87fd6a0...</td>
-<td>https://raw.githubusercontent.com/morpc-insigh...</td>
+<td>https://morpc1-my.sharepoint.com/:w:/g/persona...</td>
 </tr>
 <tr>
 <th>2</th>
@@ -9739,7 +9594,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <td>annually</td>
 <td>None</td>
 <td>https://www.arcgis.com/apps/dashboards/87fd6a0...</td>
-<td>https://raw.githubusercontent.com/morpc-insigh...</td>
+<td>https://morpc1-my.sharepoint.com/:w:/g/persona...</td>
 </tr>
 <tr>
 <th>3</th>
@@ -9756,7 +9611,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <td>annually</td>
 <td>None</td>
 <td>https://www.arcgis.com/apps/dashboards/87fd6a0...</td>
-<td>https://raw.githubusercontent.com/morpc-insigh...</td>
+<td>https://morpc1-my.sharepoint.com/:w:/g/persona...</td>
 </tr>
 <tr>
 <th>4</th>
@@ -9773,7 +9628,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <td>annually</td>
 <td>None</td>
 <td>https://www.arcgis.com/apps/dashboards/87fd6a0...</td>
-<td>https://raw.githubusercontent.com/morpc-insigh...</td>
+<td>https://morpc1-my.sharepoint.com/:w:/g/persona...</td>
 </tr>
 </tbody>
 </table>
@@ -9798,7 +9653,7 @@ C:\Users\aporr\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">catalog</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">"catalog.xlsx"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
